@@ -57,6 +57,7 @@
 		B406B7791663F53C00D0591E /* boombox_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boombox_check.png; sourceTree = "<group>"; };
 		B406B77A1663F53C00D0591E /* boombox_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boombox_close.png; sourceTree = "<group>"; };
 		B406B77B1663F53C00D0591E /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		B495831B1664253000A88D87 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +128,7 @@
 		B406B71F1663CBAC00D0591E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B495831B1664253000A88D87 /* README.md */,
 				B406B7791663F53C00D0591E /* boombox_check.png */,
 				B406B77A1663F53C00D0591E /* boombox_close.png */,
 				B406B77B1663F53C00D0591E /* Icon.icns */,
@@ -347,6 +349,7 @@
 				B406B7341663CBAC00D0591E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

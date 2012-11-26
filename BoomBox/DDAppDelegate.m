@@ -45,11 +45,16 @@
 
 - (void)iTunesCheckTimerFired:(NSTimer*)timer {
     iTunesApplication *tunes = self.iTunesApplication;
+
+    //temp menu if itunes isnt up
     if(!tunes.isRunning) {
-        NSMenu *tempMenu = [[NSMenu alloc] init];
-        [tempMenu addItemWithTitle:@"Launch iTunes" action:@selector(openITunes:) keyEquivalent:@""];
-        self.item.menu = tempMenu;
-        self.item.image = [NSImage imageNamed:@"boombox_close"];
+        if(self.item.menu == self.menu) {
+            NSMenu *tempMenu = [[NSMenu alloc] init];
+            [tempMenu addItemWithTitle:@"Launch iTunes" action:@selector(openITunes:) keyEquivalent:@""];
+            [tempMenu addItemWithTitle:@"Quit" action:@selector(quitMe:) keyEquivalent:@""];
+            self.item.menu = tempMenu;
+            self.item.image = [NSImage imageNamed:@"boombox_close"];
+        }
         return;
     }
     self.item.menu = self.menu;
@@ -120,6 +125,10 @@
 
 - (IBAction)openITunes:(id)sender {
     [self.iTunesApplication run];
+}
+
+- (IBAction)quitMe:(id)sender {
+    [[NSApplication sharedApplication] terminate:sender];
 }
 
 - (iTunesApplication*)iTunesApplication {

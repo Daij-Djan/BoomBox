@@ -11,3 +11,4 @@ history:
 
 - 0.5 initial release
 - 0.6 fixes crucial bug that kept itunes open and restarted it when quit! I think this is a bug in apple's scripting bridge though...
+- 0.6.1 adds a quite menu item to boombox WHEN itunes isnt running. (Earlier, it was only there when active)
