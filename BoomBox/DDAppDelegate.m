@@ -29,9 +29,13 @@
 #pragma mark - trigger
 
 - (void)iTunesSongChanged:(NSNotification *)note {
+    [self.timer invalidate];
+    [self performSelector:@selector(delayedNote:) withObject:note afterDelay:0.2f];
+}
+
+- (void)delayedNote:(id)note {
     [self iTunesCheckTimerFired:nil];
 
-    [self.timer invalidate];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0f
                                      target:self
                                    selector:@selector(iTunesCheckTimerFired:)
@@ -41,7 +45,15 @@
 
 - (void)iTunesCheckTimerFired:(NSTimer*)timer {
     iTunesApplication *tunes = self.iTunesApplication;
-    
+    if(!tunes.isRunning) {
+        NSMenu *tempMenu = [[NSMenu alloc] init];
+        [tempMenu addItemWithTitle:@"Launch iTunes" action:@selector(openITunes:) keyEquivalent:@""];
+        self.item.menu = tempMenu;
+        self.item.image = [NSImage imageNamed:@"boombox_close"];
+        return;
+    }
+    self.item.menu = self.menu;
+
     //title
     NSString *newTitle = [tunes updateTrack];
     NSMenuItem *trackItem = [self.menu itemWithTag:123];
@@ -106,8 +118,12 @@
     }
 }
 
+- (IBAction)openITunes:(id)sender {
+    [self.iTunesApplication run];
+}
+
 - (iTunesApplication*)iTunesApplication {
-    return [SBApplication applicationWithBundleIdentifier:@"com.apple.itunes"];
+    return (iTunesApplication*)[[SBApplication alloc] initWithBundleIdentifier:@"com.apple.itunes"];
 }
 
 @end
