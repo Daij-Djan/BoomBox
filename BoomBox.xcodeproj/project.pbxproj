@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40651261668F33600DC69C9 /* iVersion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40651251668F33600DC69C9 /* iVersion.framework */; };
+		B40651271668F34E00DC69C9 /* iVersion.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B40651251668F33600DC69C9 /* iVersion.framework */; };
 		B406B7191663CBAC00D0591E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B406B7181663CBAC00D0591E /* Cocoa.framework */; };
 		B406B7251663CBAC00D0591E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B406B7241663CBAC00D0591E /* main.m */; };
 		B406B7291663CBAC00D0591E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B406B7271663CBAC00D0591E /* Credits.rtf */; };
@@ -30,12 +32,14 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B406B73F1663DBE400D0591E /* Growl.framework in CopyFiles */,
+				B40651271668F34E00DC69C9 /* iVersion.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B40651251668F33600DC69C9 /* iVersion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iVersion.framework; sourceTree = "<group>"; };
 		B406B7151663CBAC00D0591E /* BoomBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B406B7181663CBAC00D0591E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B406B71B1663CBAC00D0591E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -57,6 +61,7 @@
 		B406B7791663F53C00D0591E /* boombox_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boombox_check.png; sourceTree = "<group>"; };
 		B406B77A1663F53C00D0591E /* boombox_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boombox_close.png; sourceTree = "<group>"; };
 		B406B77B1663F53C00D0591E /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		B4117D0D16696C5A003AA4E8 /* versions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = versions.plist; sourceTree = SOURCE_ROOT; };
 		B495831B1664253000A88D87 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -68,6 +73,7 @@
 				B406B7381663CE6A00D0591E /* ScriptingBridge.framework in Frameworks */,
 				B406B7191663CBAC00D0591E /* Cocoa.framework in Frameworks */,
 				B406B73D1663DBCA00D0591E /* Growl.framework in Frameworks */,
+				B40651261668F33600DC69C9 /* iVersion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,7 @@
 		B406B7171663CBAC00D0591E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B40651251668F33600DC69C9 /* iVersion.framework */,
 				B406B73C1663DBCA00D0591E /* Growl.framework */,
 				B406B7371663CE6A00D0591E /* ScriptingBridge.framework */,
 				B406B7181663CBAC00D0591E /* Cocoa.framework */,
@@ -128,14 +135,15 @@
 		B406B71F1663CBAC00D0591E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B406B7241663CBAC00D0591E /* main.m */,
+				B406B7391663CEF900D0591E /* iTunes.h */,
+				B4117D0D16696C5A003AA4E8 /* versions.plist */,
 				B495831B1664253000A88D87 /* README.md */,
 				B406B7791663F53C00D0591E /* boombox_check.png */,
 				B406B77A1663F53C00D0591E /* boombox_close.png */,
 				B406B77B1663F53C00D0591E /* Icon.icns */,
 				B406B73A1663D72100D0591E /* Growl Registration Ticket.growlRegDict */,
-				B406B7391663CEF900D0591E /* iTunes.h */,
 				B406B7201663CBAC00D0591E /* BoomBox-Info.plist */,
-				B406B7241663CBAC00D0591E /* main.m */,
 				B406B7261663CBAC00D0591E /* BoomBox-Prefix.pch */,
 				B406B7271663CBAC00D0591E /* Credits.rtf */,
 			);

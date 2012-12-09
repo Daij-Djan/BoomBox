@@ -16,6 +16,9 @@
 //the distributed notification sent
 #define SONG_CHANGE_NOTIFICATION @"com.apple.iTunes.playerInfo"
 
+//bundle identifier
+#define ITUNES_BUNDLE_IDENTIFIER @"com.apple.iTunes"
+
 @interface SBApplication (DD)
 
 //trackinfo as a nice string

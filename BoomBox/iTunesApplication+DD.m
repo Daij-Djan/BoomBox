@@ -11,7 +11,7 @@
 @implementation SBApplication (DD)
 
 + (iTunesApplication*)mainInstance {
-    return [SBApplication applicationWithBundleIdentifier:@"com.apple.itunes"];
+    return [SBApplication applicationWithBundleIdentifier:ITUNES_BUNDLE_IDENTIFIER];
 }
 
 - (NSString*)updateTrack {
