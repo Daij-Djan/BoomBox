@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>0.5</key>
+	<array>
+		<string>First release</string>
+	</array>
+	<key>0.6</key>
+	<array>
+		<string>FIX: crucial bug that kept itunes open and restarted it when quit! I think this is a bug in apple&apos;s scripting bridge though...</string>
+	</array>
+	<key>0.6.1</key>
+	<array>
+		<string>&apos;FEATURE&apos;: adds a quit menu item to boombox WHEN itunes isnt running. (Earlier, it was only there when active)</string>
+	</array>
+	<key>0.7</key>
+	<array>
+		<string>FIX: **Drastically** reduced CPU Usage - I was using a timer to poll itunes too often. Now I only poll the equalizer when it is open and frontmost and look for song change notifications</string>
+		<string>FEATURE: It doesnt use Growl anymore put nativly supports the Notification center.</string>
+		<string>FEATURE: Added iVersion for update checking</string>
+	</array>
+</dict>
+</plist>
